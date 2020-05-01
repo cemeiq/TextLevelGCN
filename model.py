@@ -60,7 +60,7 @@ class Model(torch.nn.Module):
 
         self.hidden_size_node = hidden_size_node
 
-        self.node_hidden.weight.data.copy_(torch.tensor(self.load_word2vec('/content/TextLevelGCN/glove.6B.200d.txt')))
+        self.node_hidden.weight.data.copy_(torch.tensor(self.load_word2vec('glove.6B.200d.txt')))
         self.node_hidden.weight.requires_grad = True
 
         self.len_vocab = len(vocab)
